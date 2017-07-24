@@ -3,13 +3,14 @@
 
   <head>
     <title> Weather Flow </title>
+    <script src="resources/chooseoutfit.js"></script>
   </head>
 
   <body>
   <h1> Weather Flow </h1>
-  <form method="post" action="">
-    <h3>Enter your zip-code: <input type="text" name="zip_code" /> </h3>
-
+  <form onsubmit="fajs()">
+    <h3>Enter your zip-code: <input type="text" id="zip_code" name="zip_code"></input> </h3>
+    <input type="button" id="ok_button" value="Submit">
 
   </form>
 </body>
