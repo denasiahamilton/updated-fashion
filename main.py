@@ -53,7 +53,8 @@ class HomePageHandler(webapp2.RequestHandler):
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('chooseoutfit.html')
+        self.response.out.write(template.render())
 
 class StylesColorsHandler(webapp2.RequestHandler):
     def get(self):
