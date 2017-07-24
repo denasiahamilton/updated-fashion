@@ -37,13 +37,24 @@ class LoginHandler(webapp2.RequestHandler):
 
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
-
+            cur_user = users.get_current_user()
+            log_url = ''
+            if cur_user:
+                log_url = users.create_logout_url('/')
+            else:
+                log_url = users.create_login_url('/')
             template = jinja_environment.get_template('homepage.html')
-            self.response.out.write(template.render())
+            var = {
+                'user' :cur_user,
+                'log_url': log_url
+            }
+            template = jinja_environment.get_template('homepage.html')
+            self.response.out.write(template.render(var))
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('chooseoutfit.html')
+        self.response.out.write(template.render())
 
 class StylesColorsHandler(webapp2.RequestHandler):
     def get(self):

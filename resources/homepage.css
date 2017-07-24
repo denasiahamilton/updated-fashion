@@ -6,14 +6,15 @@ h1{
   margin-left: 60px;
   font-family: sans-serif;
   font-weight: lighter;
-
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
+
 
 
 #header {
   position: fixed;
   background-color:  #4d0000;
-  width: 50%;
+  width: 55%;
   left: 0px;
   top: 0px;
   box-shadow: 0px 10px 20px;
