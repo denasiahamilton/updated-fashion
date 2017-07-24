@@ -52,18 +52,19 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
         zip_code = 98103
         if not zip_code:
             zip_code = 98103
-        params = {'q': zip_code,
-                    }
-        form_data = urllib.urlencode(params)
         api_url = 'http://api.openweathermap.org/data/2.5/weather?zip=' + str(zip_code) + '&APPID=63b5494aec29fe7add0c7d0975dd7feb'
         logging.info(api_url)
         response = urllib2.urlopen(api_url)
         content = response.read()
         content_dict = json.loads(content)
         my_vars= {'q':zip_code}
-
         template = jinja_environment.get_template('chooseoutfit.html')
         self.response.out.write(template.render(my_vars))
+
+class CityHandler(webapp2.RequestHandler):
+    def post(self):
+        pass
+
 
 class StylesColorsHandler(webapp2.RequestHandler):
     def get(self):
