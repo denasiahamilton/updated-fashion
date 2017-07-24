@@ -1,0 +1,40 @@
+h1{
+  color: white;
+  text-align: left;
+  font-size: 125px;
+  margin-top: 500px;
+  margin-left: 75px;
+  font-family: sans-serif;
+  font-weight: lighter;
+
+}
+
+
+#header {
+  position: fixed;
+  background-color:  #4d0000;
+  width: 50%;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 10px 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#header h3 {
+  font-size: 40px;
+  margin: 10px;
+}
+#header span {
+  display: inline-block;
+  margin-right: 50px;
+  color: white;
+}
+
+.headerLink {
+  cursor: pointer;
+  padding: 25px;
+  text-align: center;
+  margin: 0px;
+}

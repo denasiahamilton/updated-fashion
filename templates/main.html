@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Updated Fashion Login</title>
+</head>
+  <body>
+    <h1> Updated Fashion </h1>
+      {% if user %}
+      <p>Hello, {{user.nickname()}}!
+        <a href="{{log_url}}">logout</a></p>
+      {% else %}
+      <p>You tryna update your fashion? Log in!
+        <a href="{{log_url}}">login</a></p>
+      {% endif %}
+  </body>
+</html>
