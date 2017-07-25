@@ -11,7 +11,7 @@ h1{
 
 #menu {
   text-align: center;
-} 
+}
 
 #header {
   position: fixed;
@@ -37,7 +37,7 @@ h1{
 
 .headerLink {
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   margin: 0px;
 }
