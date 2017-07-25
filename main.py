@@ -52,8 +52,6 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
         zip_code = 98103
         if not zip_code:
             zip_code = 98103
-        params = {'q': zip_code,
-                    }
         form_data = urllib.urlencode(params)
         api_url = 'http://api.openweathermap.org/data/2.5/weather?zip=' + str(zip_code) + '&APPID=63b5494aec29fe7add0c7d0975dd7feb'
         logging.info(api_url)

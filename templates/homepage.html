@@ -11,7 +11,7 @@
         <a href="/choose_outfit"><span class="headerLink">WEATHER FLOW</span></a>
         <a href="/styles_colors"><span class="headerLink">COLOR MATCH</span></a>
         {% if user %}
-          <a href="{{log_url}}"><span class ="headerLink">SUP, {{user.nickname()}} LOGOUT</span></a>
+          <a href="{{log_url}}"><span class ="headerLink">SUP {{user.nickname()}} LOGOUT</span></a>
         {% else %}
           <a href="{{log_url}}"><span class ="headerLink">LOGIN</span></a>
         {% endif %}
