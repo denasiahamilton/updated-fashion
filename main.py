@@ -53,10 +53,6 @@ class HomePageHandler(webapp2.RequestHandler):
             self.response.out.write(template.render(var))
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('chooseoutfit.html')
-        self.response.out.write(template.render())
-
     def post(self):
         zip_code = self.request.get('zip_code')
         if not zip_code:
@@ -74,6 +70,7 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
         'city': city,
         'temp': temp
         }
+
         template = jinja_environment.get_template('chooseoutfit.html')
         self.response.out.write(template.render(my_vars))
 
