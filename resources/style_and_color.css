@@ -1,3 +1,8 @@
+#menu {
+  text-align: center;
+}
+
+
 html {
   background-color:  #9fbfdf;
 }
@@ -6,7 +11,7 @@ h1{
   color: white;
   text-align: left;
   font-size: 80px;
-  margin-top: 350px;
+  margin-top: 150px;
   margin-left: 60px;
   font-family: sans-serif;
   font-weight: lighter;
@@ -18,7 +23,7 @@ h1{
 #header {
   position: fixed;
   background-color:  #4d0000;
-  width: 43%;
+  width: 100%;
   left: 0px;
   top: 0px;
   box-shadow: 0px 10px 20px;
@@ -39,7 +44,7 @@ h1{
 
 .headerLink {
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   margin: 0px;
 }

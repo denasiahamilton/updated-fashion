@@ -1,9 +1,14 @@
+#menu {
+  text-align: center;
+}
 
-
+#developers {
+  margin-top: 150px;
+}
 #header {
   position: fixed;
   background-color:  #4d0000;
-  width: 43%;
+  width: 100%;
   left: 0px;
   top: 0px;
   box-shadow: 0px 10px 20px;
@@ -24,7 +29,7 @@
 
 .headerLink {
   cursor: pointer;
-  padding: 20px;
+  padding: 13px;
   text-align: center;
   margin: 0px;
 }
@@ -33,7 +38,7 @@ h1 {
   color: white;
   text-align: left;
   font-size: 80px;
-  margin-top: 125px;
+  margin-top: 100px;
   margin-left: 60px;
   font-family: sans-serif;
   font-weight: lighter;
