@@ -1,0 +1,21 @@
+h1 {
+  color: white;
+  text-align: left;
+  font-size: 80px;
+  margin-top: 350px;
+  margin-left: 60px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+}
+
+h3 {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 60px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+}

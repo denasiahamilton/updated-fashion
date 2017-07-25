@@ -6,8 +6,9 @@ h1{
   margin-left: 60px;
   font-family: sans-serif;
   font-weight: lighter;
-
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
+
 
 
 #header {
@@ -34,7 +35,7 @@ h1{
 
 .headerLink {
   cursor: pointer;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
   margin: 0px;
 }
