@@ -9,6 +9,10 @@ h1{
   text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
 
+#menu {
+  text-align: center;
+} 
+
 #header {
   position: fixed;
   background-color:  #4d0000;
