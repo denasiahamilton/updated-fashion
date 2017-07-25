@@ -19,3 +19,50 @@ h3 {
   font-weight: lighter;
   text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
+
+
+html {
+  background-color:  #9fbfdf;
+}
+
+h1{
+  color: white;
+  text-align: left;
+  font-size: 80px;
+  margin-top: 350px;
+  margin-left: 60px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+}
+
+
+
+#header {
+  position: fixed;
+  background-color:  #4d0000;
+  width: 43%;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 10px 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#header h3 {
+  font-size: 40px;
+  margin: 10px;
+}
+#header span {
+  display: inline-block;
+  margin-right: 20px;
+  color: white;
+}
+
+.headerLink {
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  margin: 0px;
+}
