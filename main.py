@@ -14,6 +14,10 @@ jinja_environment = jinja2.Environment(
         os.path.dirname(__file__) + '/templates')
         )
 
+class AboutApp (webapp2.RequestHandler):
+    def get(self):
+        self.response.write("Hello World")
+
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
@@ -72,6 +76,7 @@ class StylesColorsHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
+    ('/about', AboutApp),
     ('/login', LoginHandler),
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
