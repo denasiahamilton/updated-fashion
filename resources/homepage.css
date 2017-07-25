@@ -13,10 +13,14 @@ h1{
   text-align: center;
 }
 
+#chairman {
+  margin-top: 45px;
+}
+
 #header {
   position: fixed;
   background-color:  #4d0000;
-  width: 60%;
+  width: 100%;
   left: 0px;
   top: 0px;
   box-shadow: 0px 10px 20px;
