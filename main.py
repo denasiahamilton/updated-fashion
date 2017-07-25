@@ -54,7 +54,11 @@ class HomePageHandler(webapp2.RequestHandler):
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
     def get(self):
-        zip_code = 98103
+        template = jinja_environment.get_template('chooseoutfit.html')
+        self.response.out.write(template.render())
+
+    def post(self):
+        zip_code = self.request.get('zip_code')
         if not zip_code:
             zip_code = 98103
         api_url = 'http://api.openweathermap.org/data/2.5/weather?zip=' + str(zip_code) + '&APPID=63b5494aec29fe7add0c7d0975dd7feb'
@@ -62,7 +66,14 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
         response = urllib2.urlopen(api_url)
         content = response.read()
         content_dict = json.loads(content)
-        my_vars= {'q':zip_code}
+        city = content_dict['name']
+        temp = content_dict['main']['temp']
+        temp = int(round(1.8 * (temp - 273) + 32))
+        my_vars= {
+        'zip_code': zip_code,
+        'city': city,
+        'temp': temp
+        }
         template = jinja_environment.get_template('chooseoutfit.html')
         self.response.out.write(template.render(my_vars))
 
