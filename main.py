@@ -78,7 +78,7 @@ class StylesColorsHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/about', AboutApp),
+    ('/about_us', AboutApp),
     ('/login', LoginHandler),
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
