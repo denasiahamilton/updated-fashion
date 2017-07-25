@@ -1,16 +1,7 @@
-h1 {
-  color: white;
-  text-align: left;
-  font-size: 80px;
-  margin-top: 350px;
-  margin-left: 60px;
-  font-family: sans-serif;
-  font-weight: lighter;
-  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
-}
+
 
 h3 {
-  color: white;
+  color: #344b0d;
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
@@ -26,16 +17,23 @@ html {
 }
 
 h1{
-  color: white;
+  color: #344b0d;
   text-align: left;
   font-size: 80px;
   margin-top: 150px;
   margin-left: 60px;
   font-family: sans-serif;
   font-weight: lighter;
-  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
 
+#zip_code{
+  background-color:rgba(0, 0, 0, 0);
+}
+
+#submit{
+  background-color:rgba(0, 0, 0, 0);
+  color: #344b0d;
+}
 
 #header {
   position: fixed;
@@ -71,4 +69,18 @@ p {
   size: 24px;
   font-family: sans-serif;
   font-weight: lighter;
+}
+
+#advice p{
+  width: 40%;
+  padding: 10px;
+  line-height: 40px;
+  font-size: 24px;
+  color:  #4d0000;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+#advice{
+  margin-left: 60px;
 }
