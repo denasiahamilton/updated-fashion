@@ -53,7 +53,7 @@ class HomePageHandler(webapp2.RequestHandler):
             self.response.out.write(template.render(var))
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         zip_code = self.request.get('zip_code')
         if not zip_code:
             zip_code = 98103

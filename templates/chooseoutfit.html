@@ -16,11 +16,11 @@
         </div>
   <h1> Weather Flow </h1>
 
-  <form method="post" action="">
+  <form method="get" action="">
     <h3>Enter your zip-code: <input type="text" id="zip_code" name="zip_code"></input> </h3>
     <input type="submit" value="Submit">
   </form>
-  
+
   {% if temp <= 0 %}
   <p>You are in {{city}} right now. It is {{temp}} degrees outside. Bruh, why are you going out??!</p>
   {% elif temp <= 32 and temp > 0 %}
