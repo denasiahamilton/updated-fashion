@@ -17,6 +17,12 @@ jinja_environment = jinja2.Environment(
 class AboutApp(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('about_us.html')
+
+        self.response.out.write(template.render())
+
+class FeedbackHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('feedback.html')
         self.response.out.write(template.render())
 
 class LoginHandler(webapp2.RequestHandler):
@@ -49,6 +55,7 @@ class HomePageHandler(webapp2.RequestHandler):
                 'user' :cur_user,
                 'log_url': log_url
             }
+
             template = jinja_environment.get_template('homepage.html')
             self.response.out.write(template.render(var))
 
@@ -102,6 +109,7 @@ class StylesColorsHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/about_us', AboutApp),
+    ('/feedback', FeedbackHandler),
     ('/login', LoginHandler),
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
