@@ -20,7 +20,11 @@ class Messages(ndb.Model):
     message = ndb.StringProperty()
 
 class CreateMessages(webapp2.RequestHandler):
+<<<<<<< HEAD
     def post(self):
+=======
+    def get(self):"""
+>>>>>>> 7db12c332ceeb8c79b6c6c62225b8eb93dd6ea49
         message_key = ndb.Key('Messages', self.request.get('sender_name'))
         message = message_key.get()
         if not message:
@@ -29,7 +33,7 @@ class CreateMessages(webapp2.RequestHandler):
                 email_address =  self.request.get('email_address'),
                 message =  self.request.get('message'))
             message.key = message_key
-            message.put()
+            message.put()"""
 
 
 class AboutApp(webapp2.RequestHandler):
@@ -39,10 +43,30 @@ class AboutApp(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
+<<<<<<< HEAD
     def get(self):
+=======
+    def post(self):
+        message_key = ndb.Key('Message', self.request.get('sender_name'))
+        message = message_key.get()
+        if not message:
+            message = Message(
+                sender_name = self.request.get('sender_name'),
+                email_address =  self.request.get('email_address'),
+                message =  self.request.get('message'))
+            message.key = message_key
+            message.put()
 
-        template = jinja_environment.get_template('feedback.html')
-        self.response.out.write(template.render())
+        """query = Message.query().order(Message.sender_name)
+        message = query.fetch()"""
+        self.redirect('/about_us')
+
+        variables = {'message': message}
+"""        template = jinja_environment.get_template('feedback.html')"""
+        self.response.out.write(template.render(variables))
+
+>>>>>>> 7db12c332ceeb8c79b6c6c62225b8eb93dd6ea49
+
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
@@ -135,5 +159,4 @@ app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
     ('/styles_colors', StylesColorsHandler)
-
 ], debug=True)

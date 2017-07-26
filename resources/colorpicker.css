@@ -6,7 +6,7 @@
 	background: url(colorpicker_background.png);
 	font-family: Arial, Helvetica, sans-serif;
 	display: none;
-	opacity: .9;
+	opacity: .85;
 }
 .colorpicker_color {
 	width: 150px;
