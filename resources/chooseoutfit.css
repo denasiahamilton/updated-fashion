@@ -14,7 +14,7 @@ h1 {
 }
 
 h3 {
-  color: #344b0d;
+  color: #4d0000;
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
@@ -30,7 +30,7 @@ html {
 }
 
 h1{
-  color: #344b0d;
+  color: #4d0000;
   text-align: left;
   font-size: 80px;
   margin-top: 150px;
@@ -92,7 +92,7 @@ p {
   font-size: 24px;
   color:  #4d0000;
   font-weight: bold;
-  border: 1px solid white;
+  margin-top: 100px;
 }
 
 #advice{
