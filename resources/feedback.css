@@ -77,4 +77,12 @@ h3 {
 
 label {
   color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  margin-left: 60px;
+}
+
+#button {
+  margin-left: 60px;
 }
