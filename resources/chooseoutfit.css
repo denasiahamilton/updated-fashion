@@ -85,16 +85,27 @@ p {
   font-weight: lighter;
 }
 
-#advice p{
+.hidden p{
   width: 40%;
   padding: 10px;
   line-height: 40px;
   font-size: 24px;
   color:  #4d0000;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
-#advice{
+.hidden{
   margin-left: 60px;
+}
+
+#weather p{
+  width: 40%;
+  line-height: 40px;
+  font-size: 24px;
+  color:  #4d0000;
+  font-weight: bold;
+  margin-left: 600px;
+  margin-top: -300px;
+  transform: rotate(30deg);
 }

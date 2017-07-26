@@ -77,10 +77,12 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
         city = content_dict['name']
         temp = content_dict['main']['temp']
         temp = int(round(1.8 * (temp - 273) + 32))
+        weather = content_dict['weather'][0]['description']
         my_vars= {
         'zip_code': zip_code,
         'city': city,
-        'temp': temp
+        'temp': temp,
+        'weather': weather
         }
 
         template = jinja_environment.get_template('chooseoutfit.html')
