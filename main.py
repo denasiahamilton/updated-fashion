@@ -39,7 +39,7 @@ class AboutApp(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
 
         template = jinja_environment.get_template('feedback.html')
         self.response.out.write(template.render())
