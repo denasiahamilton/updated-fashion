@@ -81,8 +81,23 @@ class CityHandler(webapp2.RequestHandler):
 
 class StylesColorsHandler(webapp2.RequestHandler):
     def get(self):
+        color = self.request.get('color')
+        if not color:
+            color = "00ffa6"
+
+        api_url = 'http://www.thecolorapi.com/form-id?hex=' + color
+        response = urllib2.urlopen(api_url)
+        content = response.read()
+        content_dict = json.loads(content)
+        #what is content_dict? a list? of strings? color hex number? color name?
+
         template = jinja_environment.get_template('style_and_color.html')
+        my_vars = {
+            'color': color,
+            'content': content
+        }
         self.response.out.write(template.render())
+
 
 
 app = webapp2.WSGIApplication([
