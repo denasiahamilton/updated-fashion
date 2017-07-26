@@ -2,9 +2,15 @@
 <head>
   <title> Color Match </title>
   <link rel="stylesheet" href="resources/style_and_color.css"/>
+  <link rel="stylesheet" media="screen" type="text/css" href="resources/colorpicker.css" />
+<script type="text/javascript" src="resources/jquery.js"></script>
+<script type="text/javascript" src="resources/colorpicker.js"></script>
+<script type="text/javascript" src="resources/eye.js"></script>
+<script type="text/javascript" src="resources/utils.js"></script>
+<script type="text/javascript" src="resources/layout.js?ver=1.0.2"></script>
 </head>
 <body>
-  <div style='position:absolute;z-index:0;left:0;top:0;bottom:0;right:0;background-image:url(resources/colorimage.jpg);background-size: cover'>
+  <div style='position:absolute;left:0;top:0;bottom:0;right:0;background-image:url(resources/colorimage.jpg);background-size:cover'>
     <div id="menu">
     <div id="header">
           <a href="/"><span class="headerLink">HOME</span></a>
@@ -14,8 +20,10 @@
       </div>
       </div>
       <h1> Color Match </h1>
-    <iframe align='right'  width='40%' height=60% src="http://www.thecolorapi.com/form-scheme">
+      <div style="z-index:-1;position:abosulute;margin-right:40px">
     </div>
-</iframe>
+    <p  id="colorpickerHolder"/>
+    <iframe align='right'  width='40%' height=60% src="http://www.thecolorapi.com/form-scheme"></iframe>
+</div>
 </body>
 </html>

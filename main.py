@@ -29,7 +29,7 @@ class LoginHandler(webapp2.RequestHandler):
         else:
             log_url = users.create_login_url('/')
             logging.info(log_url)
-        template = jinja_environment.get_template('main.html')
+        template = jinja_environment.get_template('login.html')
         var = {
             'user' :cur_user,
             'log_url': log_url
