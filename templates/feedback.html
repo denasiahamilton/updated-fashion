@@ -5,7 +5,7 @@
 </head>
 
 <body>
-  <div style='position:absolute;z-index:0;left:0;top:0;bottom:0;right:0;background-image:url(resources/fedback.jpg);background-size: cover'>
+  <div style='position:absolute;z-index:0;left:0;top:0;bottom:0;right:0;background-image:url(resources/computer.jpg);background-size: cover'>
     <div id='menu'>
   <div id="header">
         <a href="/"><span class="headerLink">HOME</span></a>
@@ -17,19 +17,18 @@
 
     <div class="container">
       <header class="clearfix">
-        <h1> Leave us Feedback for Updated Fashion </h1>
+        <h1> Leave us Feedback</h1>
       </header>
         <div class="main" >
-          <form class="form" method="post" action="/about_us">
+          <form class="form" method="post" action="">
             <div class="column" >
               <label for="full_name"> Your Full Name </label>
-                <input type="text" id="full_name" name="sender_name" placeholder="Full Name"> </input>
+                <input type="text" id="full_name" name="sender_name" placeholder="Full Name"> </input> <br><br><br>
               <label for="email"> Your Email Address </label>
-                <input type="text" id="email" name="email_address" placeholder="Email Address"> </input>
+                <input type="text" id="email" name="email_address" size="30" placeholder="Email Address"> </input> <br><br><br>
               <label for="message"> Enter your Message Here </label>
-                <input type="text" id="message" name="message" placeholder="Message"> </input>
-
-              <input type="submit" name="submit"> </input>
+                <input type="text" id="message" name="message" size="40" placeholder="Message"> </input> <br> <br><br>
+              <input type="submit" id="button" name="submit"> </input>
             </div>
           </form>
         </div>
