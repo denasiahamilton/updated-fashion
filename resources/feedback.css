@@ -1,0 +1,80 @@
+#header span:hover {
+  color: gray;
+}
+#header span:active {
+   color: gray;
+}
+
+#menu {
+  text-align: center;
+}
+
+#developers {
+  margin-top: 150px;
+}
+#header {
+  position: fixed;
+  background-color:  #4d0000;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 10px 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#header h3 {
+  font-size: 40px;
+  margin: 10px;
+}
+#header span {
+  display: inline-block;
+  margin-right: 20px;
+  color: white;
+}
+
+.headerLink {
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  margin: 0px;
+}
+
+h1 {
+  color: white;
+  text-align: left;
+  font-size: 80px;
+  margin-top: 100px;
+  margin-left: 60px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+}
+
+#app {
+  font-size: 20px;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 60px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: white;
+  line-height: 150%;
+}
+
+h3 {
+  color: white;
+  text-align: right;
+  font-size: 50px;
+  margin-top: -415px;
+  margin-top: -570px;
+  margin-right: 120px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+}
+
+label {
+  color: white;
+}
