@@ -22,7 +22,7 @@ h1 {
 }
 
 h3 {
-  color: #344b0d;
+  color: rgb(0, 0, 102);
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
@@ -38,7 +38,7 @@ html {
 }
 
 h1{
-  color: #344b0d;
+  color: #4d0000;
   text-align: left;
   font-size: 80px;
   margin-top: 150px;
@@ -54,7 +54,7 @@ h1{
 
 #submit{
   background-color:rgba(0, 0, 0, 0);
-  color: #344b0d;
+  color: rgb(0, 0, 102);
 }
 
 #header {
@@ -97,10 +97,11 @@ p {
   width: 40%;
   padding: 10px;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 18px;
   color:  #4d0000;
   font-weight: bold;
-  border: 1px solid white;
+  margin-top: 65px;
+  /*border: 1px solid white;*/
 }
 
 #advice{
