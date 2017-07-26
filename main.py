@@ -135,5 +135,4 @@ app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
     ('/styles_colors', StylesColorsHandler)
-
 ], debug=True)
