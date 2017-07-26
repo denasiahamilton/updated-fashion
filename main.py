@@ -19,6 +19,19 @@ class Messages(ndb.Model):
     email_address = ndb.StringProperty()
     message = ndb.StringProperty()
 
+class CreateMessages(webapp2.RequestHandler):
+    def post(self):
+        message_key = ndb.Key('Messages', self.request.get('sender_name'))
+        message = message_key.get()
+        if not message:
+            message = Message(
+                sender_name = self.request.get('sender_name'),
+                email_address =  self.request.get('email_address'),
+                message =  self.request.get('message'))
+            message.key = message_key
+            message.put()
+
+
 class AboutApp(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('about_us.html')
@@ -26,7 +39,8 @@ class AboutApp(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
+
         template = jinja_environment.get_template('feedback.html')
         self.response.out.write(template.render())
 
@@ -49,20 +63,19 @@ class LoginHandler(webapp2.RequestHandler):
 
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
-            cur_user = users.get_current_user()
-            log_url = ''
-            if cur_user:
-                log_url = users.create_logout_url('/')
-            else:
-                log_url = users.create_login_url('/')
-            template = jinja_environment.get_template('homepage.html')
-            var = {
-                'user' :cur_user,
-                'log_url': log_url
-            }
+        cur_user = users.get_current_user()
+        log_url = ''
+        if cur_user:
+            log_url = users.create_logout_url('/')
+        else:
+            log_url = users.create_login_url('/')
 
-            template = jinja_environment.get_template('homepage.html')
-            self.response.out.write(template.render(var))
+        template = jinja_environment.get_template('homepage.html')
+        var = {
+            'user' :cur_user,
+            'log_url': log_url
+        }
+        self.response.out.write(template.render(var))
 
 class ChooseOutfitHandler(webapp2.RequestHandler):
     def get(self):
@@ -115,6 +128,7 @@ class StylesColorsHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/about_us', AboutApp),
     ('/feedback', FeedbackHandler),
+    ('/message', CreateMessages),
     ('/login', LoginHandler),
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
