@@ -1,3 +1,9 @@
+div.hidden {
+  display: none; 
+}
+
+
+
 #header span:hover {
   color: gray;
 }
