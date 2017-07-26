@@ -1,3 +1,11 @@
+#header span:hover {
+  color: gray;
+}
+
+#header span:active {
+   color: gray;
+}
+
 #menu {
   text-align: center;
 }
