@@ -61,7 +61,11 @@ h3 {
   text-align: right;
   font-size: 50px;
   margin-top: -400px;
+<<<<<<< HEAD
   margin-right: 120ipx;
+=======
+  margin-right: 150px;
+>>>>>>> 7bc03cef79acebb8b83bdd97f359e32db5496b07
   font-weight: lighter;
   font-family: sans-serif;
   text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
