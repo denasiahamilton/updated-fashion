@@ -14,6 +14,11 @@ jinja_environment = jinja2.Environment(
         os.path.dirname(__file__) + '/templates')
         )
 
+class Messages(ndb.Model):
+    sender_name = ndb.StringProperty()
+    email_address = ndb.StringProperty()
+    message = ndb.StringProperty()
+
 class AboutApp(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('about_us.html')
