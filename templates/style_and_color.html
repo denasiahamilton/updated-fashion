@@ -1,5 +1,6 @@
 <html>
 <head>
+  Content-Type: application/json
   <title> Color Match </title>
   <link rel="stylesheet" href="resources/style_and_color.css"/>
   <link rel="stylesheet" media="screen" type="text/css" href="resources/colorpicker.css" />
@@ -22,8 +23,16 @@
       <h1> Color Match </h1>
       <div style="z-index:-1;position:abosulute;margin-right:40px">
     </div>
+<<<<<<< HEAD
     <p  id="colorpickerHolder"/>
     <iframe align='right'  width='40%' height=60% src="http://www.thecolorapi.com/form-scheme"></iframe>
 </div>
+=======
+</iframe>
+  <form method="get" action='/styles_colors' />
+    <p> Enter a color: <input type="text" name="color"> </input></p>
+  </form>
+  <p>{{content}}</p>
+>>>>>>> daafa6a135f31389ecc9b19e579920c3b2c07765
 </body>
 </html>

@@ -1,3 +1,11 @@
+#header span:hover {
+  color: gray;
+}
+#header span:active {
+   color: gray;
+}
+
+
 #menu {
   text-align: center;
 }
@@ -60,7 +68,8 @@ h3 {
   color: white;
   text-align: right;
   font-size: 50px;
-  margin-top: -400px;
+  margin-top: -415px;
+  margin-top: -570px;
   margin-right: 120px;
   font-weight: lighter;
   font-family: sans-serif;
@@ -110,8 +119,19 @@ h6 {
   line-height: 150%;
 }
 
-#social{
+img {
   max-height: 50px;
-  align-content: center;
-  display: flex;
+  margin-left: 838px;
 }
+
+
+#luislinkedin {
+  max-height: 50px;
+  margin-left: 1045px;
+  margin-top: -49px;
+}
+
+#denasialinkedin {
+  max-height: 50px;
+  margin-left: 1260px;
+  margin-top: -50px;
