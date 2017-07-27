@@ -92,8 +92,7 @@ h1{
   line-height: 40px;
   font-size: 24px;
   color:  #4d0000;
-  font-weight: bold;
   margin-left: 600px;
-  margin-top: -300px;
+  margin-top: 50px;
   transform: rotate(30deg);
 }
