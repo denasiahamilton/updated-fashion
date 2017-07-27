@@ -16,12 +16,12 @@ h1 {
 h3 {
   color: #4d0000;
   text-align: left;
-  font-size: 20px;
+  font-size: 23px;
   margin-top: 10px;
   margin-left: 60px;
   font-family: sans-serif;
-  font-weight: lighter;
-  text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
+  font-weight: 500;
+  /*text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92); */
 }
 
 
@@ -46,7 +46,7 @@ h1{
 
 #submit{
   background-color:rgba(0, 0, 0, 0);
-  color: #344b0d;
+  color: #4d0000;
 }
 
 #header {
@@ -64,6 +64,7 @@ h1{
 #header h3 {
   font-size: 40px;
   margin: 10px;
+  font-weight: 400;
 }
 #header span {
   display: inline-block;
@@ -87,12 +88,12 @@ p {
 
 .hidden p{
   width: 40%;
-  padding: 10px;
+  margin-left: : 10px;
   line-height: 40px;
-  font-size: 18px;
+  font-size: 23px;
   color:  #4d0000;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 60px;
 }
 
 .hidden{
