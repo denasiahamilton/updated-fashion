@@ -16,33 +16,26 @@
             <a href="/about_us"><span class="headerLink">ABOUT US</span></a>
         </div>
         </div>
-          <!--<div id='menu'>
-        <div id="header">
-              <a href="/"><span class="headerLink">HOME</span></a>
-              <a href="/choose_outfit"><span class="headerLink">WEATHER FLOW</span></a>
-              <a href="/styles_colors"><span class="headerLink">COLOR MATCH</span></a>
-              <a href="/about_us"><span class="headerLink">ABOUT US</span></a>
-          </div>
-        </div> -->
+
   <h1> Weather Flow </h1>
 
   <form method="get" action="">
-    <h3>Enter your zip-code: <input type="text" id="zip_code" name="zip_code">  </input><input type="submit" id='submit'value="Submit"></h3>
+    <h3>Enter your zip-code: <input type="text" id="zip_code" name="zip_code" size="8">  </input><input type="submit" id='submit'value="Submit"></h3>
   </form>
 <div class='hidden'>
   {% if temp <= 0 %}
   <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. Bruh, why are you going out??!</p>
-  {% elif temp <= 32 and temp > 0 %}
+  {% elif temp <= 32 %}
   <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. We suggest multiple layers of heavy clothing. Layering is always trendy in cold weather. Find a show (snow) stopping hat because it will be the first thing people notice on you. Throw some fashionable boots and let them steal the show. But please, no uggs....</p>
-  {% elif temp <= 55 and temp > 32 %}
+  {% elif temp <= 55 %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. So it is pretty cold outside? Do you easily get cold? If it’s a rainy or windy day, you’ll need a thicker jacket or a cardigan. A breezy day could drop the temperature 10 degrees, which may be too cold for you. In this case, consider wearing a windproof jacket to keep warm.</p>
-  {% elif temp <= 65 and temp > 55 %}
+  {% elif temp <= 65 %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. You can pass on the thick jackets for this temp. Go with tights if you want a more formal look or jeans for a more casual look. Also, add a zip up or button up light jacket for versatility throughout the day.</p>
-  {% elif temp <= 80 and temp > 65 %}
+  {% elif temp <= 80 %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. Definitely a lightweight wrap. Sweatshirts, joggers, t-shirts, shorts, polos, button up shirts all acceptable in this weather. Play around with your style. The weather is perfect for a little of everything.</p>
-  {% elif temp <= 90 and temp > 80 %}
+  {% elif temp <= 90 %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. So the sun is bright huh? Definitely suggesting something lightweight and breathable. Fabric that doesn’t breathe well will trap both sweat and hot air near your skin, leading to rapid overheating. Finer threads, looser weaves, and more porous materials all help add to a textile’s breathability. Artificial fibers are typically non-breathable, and will make a garment more likely to keep sweat and air in.</p>
-  {% elif temp <= 100 and temp > 90 %}
+  {% elif temp <= 100 %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. TANKTOPS!!! For sure the way to go. Shorts and low top shoes with no socks will keep the body as cool as possible. If living close to the coast go ahead and wear a button up short sleeve shirt but dont button the shirt. ;)</p>
   {% else %}
    <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. Hell has open its doors. STAY INSIDE.</p>
