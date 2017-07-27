@@ -20,7 +20,7 @@ class Messages(ndb.Model):
     message = ndb.StringProperty()
 
 class CreateMessages(webapp2.RequestHandler):
-    def get(self):"""
+    def get(self):
         message_key = ndb.Key('Messages', self.request.get('sender_name'))
         message = message_key.get()
         if not message:
@@ -29,13 +29,12 @@ class CreateMessages(webapp2.RequestHandler):
                 email_address =  self.request.get('email_address'),
                 message =  self.request.get('message'))
             message.key = message_key
-            message.put()"""
+            message.put()
 
 
 class AboutApp(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('about_us.html')
-
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
@@ -55,7 +54,7 @@ class FeedbackHandler(webapp2.RequestHandler):
         self.redirect('/about_us')
 
         variables = {'message': message}
-"""        template = jinja_environment.get_template('feedback.html')"""
+        template = jinja_environment.get_template('feedback.html')
         self.response.out.write(template.render(variables))
 
 
@@ -116,10 +115,6 @@ class ChooseOutfitHandler(webapp2.RequestHandler):
 
         template = jinja_environment.get_template('chooseoutfit.html')
         self.response.out.write(template.render(my_vars))
-
-class CityHandler(webapp2.RequestHandler):
-    def post(self):
-        pass
 
 
 class StylesColorsHandler(webapp2.RequestHandler):
