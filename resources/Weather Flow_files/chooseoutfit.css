@@ -2,6 +2,14 @@
   color: gray;
 }
 
+#advice {
+  background-color: #4d0000;
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+}
+
 #header span:active {
    color: gray;
 }
