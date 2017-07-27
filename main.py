@@ -20,7 +20,10 @@ class Messages(ndb.Model):
     message = ndb.StringProperty()
 
 class CreateMessages(webapp2.RequestHandler):
+
     def post(self):
+
+>>>>>>> 7db12c332ceeb8c79b6c6c62225b8eb93dd6ea49
         message_key = ndb.Key('Messages', self.request.get('sender_name'))
         message = message_key.get()
         if not message:
@@ -29,7 +32,7 @@ class CreateMessages(webapp2.RequestHandler):
                 email_address =  self.request.get('email_address'),
                 message =  self.request.get('message'))
             message.key = message_key
-            message.put()
+            message.put()"""
 
 
 class AboutApp(webapp2.RequestHandler):
