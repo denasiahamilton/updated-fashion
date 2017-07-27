@@ -80,23 +80,24 @@ h1{
 
 p {
   color: white;
-  size: 24px;
+  size: 16px;
   font-family: sans-serif;
-  font-weight: lighter;
+  font-weight: 500;
 }
 
 .hidden p{
   width: 40%;
   padding: 10px;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 18px;
   color:  #4d0000;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 25px;
 }
 
 .hidden{
   margin-left: 60px;
+  size: 16px;
 }
 
 #weather p{
