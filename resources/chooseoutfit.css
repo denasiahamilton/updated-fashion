@@ -1,8 +1,26 @@
+#header span:hover {
+  color: gray;
+}
+
+#header span:active {
+   color: gray;
+}
+
 #menu {
   text-align: center;
 }
 
+#btn {
+  margin-top: 150px;
+  margin-left: 60px;
+  background-color: #4d0000;
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
 
+
+}
 
 h3 {
   color: #4d0000;
