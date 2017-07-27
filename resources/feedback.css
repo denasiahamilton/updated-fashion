@@ -63,16 +63,6 @@ h1 {
   text-shadow: -9px 4px 8px rgba(150, 150, 150, 0.92);
 }
 
-#app {
-  font-size: 20px;
-  text-align: left;
-  margin-top: 50px;
-  margin-left: 60px;
-  font-family: sans-serif;
-  font-weight: lighter;
-  color: white;
-  line-height: 150%;
-}
 
 h3 {
   color: white;
