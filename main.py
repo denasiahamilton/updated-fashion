@@ -20,11 +20,8 @@ class Messages(ndb.Model):
     message = ndb.StringProperty()
 
 class CreateMessages(webapp2.RequestHandler):
-<<<<<<< HEAD
     def post(self):
-=======
-    def get(self):"""
->>>>>>> 7db12c332ceeb8c79b6c6c62225b8eb93dd6ea49
+        """
         message_key = ndb.Key('Messages', self.request.get('sender_name'))
         message = message_key.get()
         if not message:
@@ -43,10 +40,7 @@ class AboutApp(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
-<<<<<<< HEAD
     def get(self):
-=======
-    def post(self):
         message_key = ndb.Key('Message', self.request.get('sender_name'))
         message = message_key.get()
         if not message:
@@ -65,7 +59,7 @@ class FeedbackHandler(webapp2.RequestHandler):
 """        template = jinja_environment.get_template('feedback.html')"""
         self.response.out.write(template.render(variables))
 
->>>>>>> 7db12c332ceeb8c79b6c6c62225b8eb93dd6ea49
+
 
 
 class LoginHandler(webapp2.RequestHandler):
