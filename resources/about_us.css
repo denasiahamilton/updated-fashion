@@ -164,4 +164,6 @@ h5 {
   max-height: 315px;
   display: flex;
   position: fixed;
+  border: 5px solid black;
+  border-radius: 25px;
 }
