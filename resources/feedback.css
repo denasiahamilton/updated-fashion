@@ -9,6 +9,17 @@
   text-align: center;
 }
 
+#btn {
+  margin-top: 10px;
+  margin-left: 60px;
+  background-color: #4d0000;
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+
 #developers {
   margin-top: 150px;
 }
