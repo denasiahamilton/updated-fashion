@@ -1,13 +1,12 @@
-#header span:hover {
+7#header span:hover {
   color: gray;
 }
 #header span:active {
    color: gray;
 }
 
-#squares {
-  border-style: hidden;
-  border: 5px white;
+#about_us {
+  color: gray;
 }
 
 #menu {

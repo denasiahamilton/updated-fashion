@@ -1,4 +1,5 @@
-$(document).ready(function(){
-  $('p').fadeOut(1);
-  $('p').fadeIn(500);
+$(document).ready(function() {
+  $('hidden').fadeOut(1);
+  $('form').removeClass('hidden');
+  $('hidden').fadeIn(2500);
  });
