@@ -22,7 +22,7 @@
   <form method="get" action="">
     <h3>Enter your zip-code: <input type="text" id="zip_code" name="zip_code" size="8">  </input><input type="submit" id='btn' value="Submit"></h3>
   </form>
-<div class='hidden'>
+<div class='hidden' id="advice">
   {% if temp <= 0 %}
   <p>You are in {{city}} right now. Weather: {{weather}}. It is {{temp}} degrees outside. Bruh, why are you going out??!</p>
   {% elif temp <= 32 %}
