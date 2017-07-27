@@ -1,5 +1,11 @@
  $(document).ready(function() {
-   $('h4').fadeOut(1);
-   $('h4').removeClass('hidden');
-   $('h4').fadeIn(2500);
+  scroll();
+  scroll();
+  scroll();
   });
+
+  function scroll() {
+    $('h4').fadeOut(500);
+    $('h4').removeClass('hidden');
+    $('h4').fadeIn(2500);
+  }
