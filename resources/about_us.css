@@ -5,6 +5,10 @@
    color: gray;
 }
 
+#squares {
+  border-style: hidden;
+  border: 5px white;
+}
 
 #menu {
   text-align: center;
