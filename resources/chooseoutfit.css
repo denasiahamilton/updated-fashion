@@ -98,7 +98,11 @@ h1{
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 10px;
+<<<<<<< HEAD
   padding: 10px;
+=======
+  padding: 20px;
+>>>>>>> decb6b545e0a4a46c95877d952f491aadd417a54
 }
 
 .hidden{
