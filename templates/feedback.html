@@ -29,11 +29,18 @@
               <label for="message"> Enter your Message Here </label>
                 <input type="text" id="message" name="message" size="40" placeholder="Message"> </input> <br> <br><br>
                 <input type="reset" id="resetButton"/>
-              
+
               <input type="submit" id="button" name="submit"> </input>
             </div>
           </form>
         </div>
       </div>
+
+      {% for message in message_list %}
+        Name: {{message.sender_name}}
+        Email Address: {{message.email_address}}
+        Message: {{message.message}}
+      {% endfor %}
+
   </body>
 </html>

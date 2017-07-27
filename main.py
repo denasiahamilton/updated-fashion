@@ -14,23 +14,10 @@ jinja_environment = jinja2.Environment(
         os.path.dirname(__file__) + '/templates')
         )
 
-class Messages(ndb.Model):
+class Message(ndb.Model):
     sender_name = ndb.StringProperty()
     email_address = ndb.StringProperty()
     message = ndb.StringProperty()
-
-class CreateMessages(webapp2.RequestHandler):
-    def get(self):
-        message_key = ndb.Key('Messages', self.request.get('sender_name'))
-        message = message_key.get()
-        if not message:
-            message = Message(
-                sender_name = self.request.get('sender_name'),
-                email_address =  self.request.get('email_address'),
-                message =  self.request.get('message'))
-            message.key = message_key
-            message.put()
-
 
 class AboutApp(webapp2.RequestHandler):
     def get(self):
@@ -38,25 +25,33 @@ class AboutApp(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class FeedbackHandler(webapp2.RequestHandler):
+    def get(self):
+        sender_name = ""
+        email_address = ""
+        message = ""
+        query = Message.query() #query queries the database for messages
+        message_list = query.fetch() #fetch fetches the list of messages from the database and puts it into a variable
+
+        template = jinja_environment.get_template('feedback.html')
+        variables = {
+            'message': message,
+            'sender_name': sender_name,
+            'email_address': email_address,
+            'message_list': message_list}
+        self.response.out.write(template.render(variables))
+
     def post(self):
         message_key = ndb.Key('Message', self.request.get('sender_name'))
         message = message_key.get()
+
         if not message:
             message = Message(
                 sender_name = self.request.get('sender_name'),
                 email_address =  self.request.get('email_address'),
                 message =  self.request.get('message'))
-            message.key = message_key
-            message.put()
-
-        """query = Message.query().order(Message.sender_name)
-        message = query.fetch()"""
-        self.redirect('/about_us')
-
-        variables = {'message': message}
-        template = jinja_environment.get_template('feedback.html')
-        self.response.out.write(template.render(variables))
-
+        message.key = message_key
+        message.put()
+        self.redirect('/feedback')
 
 
 class LoginHandler(webapp2.RequestHandler):
@@ -136,12 +131,9 @@ class StylesColorsHandler(webapp2.RequestHandler):
         }"""
         self.response.out.write(template.render())
 
-
-
 app = webapp2.WSGIApplication([
     ('/about_us', AboutApp),
     ('/feedback', FeedbackHandler),
-    ('/message', CreateMessages),
     ('/login', LoginHandler),
     ('/', HomePageHandler),
     ('/choose_outfit', ChooseOutfitHandler),
