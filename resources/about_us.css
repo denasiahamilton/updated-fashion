@@ -164,4 +164,5 @@ h5 {
   max-height: 315px;
   display: flex;
   position: fixed;
+  margin-top: 25px;
 }
