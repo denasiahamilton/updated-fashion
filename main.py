@@ -31,13 +31,16 @@ class FeedbackHandler(webapp2.RequestHandler):
         message = ""
         query = Message.query() #query queries the database for messages
         message_list = query.fetch() #fetch fetches the list of messages from the database and puts it into a variable
-
+        i=0
+        for n in message_list:
+            i+=1
         template = jinja_environment.get_template('feedback.html')
         variables = {
             'message': message,
             'sender_name': sender_name,
             'email_address': email_address,
-            'message_list': message_list}
+            'message_list': message_list,
+            'i': i}
         self.response.out.write(template.render(variables))
 
     def post(self):
